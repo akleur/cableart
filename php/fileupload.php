@@ -1,8 +1,6 @@
 <?php
 
 /****************************************
-Example of how to use this uploader class...
-You can uncomment the following lines (minus the require) to use these as your defaults.
 
 // list of valid extensions, ex. array("jpeg", "xml", "bmp")
 $allowedExtensions = array();
