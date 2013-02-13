@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>cableArt - be part of our network</title>
+
+	<!-- Included CSS Files -->
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700italic,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="stylesheets/app.css">
+
+	<script src="javascripts/foundation/modernizr.foundation.js"></script>
+
+</head>
+<body>
+<div id="cableArtWrapper">
+
+<header>
+	<div class="row">
+		<div class="twelve columns">
+			<h2>cableArt</h2>
+			<p>be part of our network</p>
+		</div>
+	</div>
+</header>
+
+<nav>
+	<div class="row">
+		<div class="eight columns">
+			<ul class="nav-bar right">
+				<li class="right" id="cableArtLinkAbout"><a onclick ="cableArtNavi('About')">About</a></li>
+				<li class="right" id="cableArtLinkUpload"><a onclick ="cableArtNavi('Upload')">Upload your pic</a></li>
+				<li class="right" id="cableArtLinkGallery"><a onclick ="cableArtNavi('Gallery')">Gallery</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<section class="cableArtMain" id="cableArtUpload">
+	<div class="row">
+		<div class="eight columns">
+			<form id="cableArtUploadForm" name="cableArtUploadForm" method="POST">
+
+			<div id="cableArtFileUploader"></div>
+
+			<div class="cableArtHint">All information is voluntary but you have to agree with our <a href="#artCableCond">conditons of use.</a></div>
+
+			<label for="picNickname">Your name / nickname</label>
+			<input type="text" id="picNickname" name="picNickname" placeholder="Bob Ross">
+
+			<label for="picEmail">Your email</label>
+			<input type="email" id="picEmail" name="picEmail" placeholder="yourname@example.com">
+
+			<label for="picTitle">Title of the picture</label>
+			<input type="text" id="picTitle" name="picTitle" placeholder="A beautiful picture">
+
+			<label for="picLocation">Where did you shot the picture?</label>
+			<input type="text" id="picLocation" name="picLocation" placeholder="Berlin">
+
+			<label for="picComment">Comment / Description</label>
+			<textarea id="picComment" name="picComment" placeholder="You can write comment about the pic here"></textarea>
+
+			<div class="row">
+				<label for="picAgreement" class="left inline">
+				<input type="checkbox" id="picAgreement" name="picAgreement" required>
+				I agree with the <span class="cableArtConditions has-tip tip-top">conditons of use</span> of my picture</label>
+			</div>		
+
+			<div class="button secondary has-tip tip-right" id="picSubmit" data-selector="tooltipnu0xdt" title="Please choose a file to upload first!">Submit your pic</div>		
+
+			</form>
+
+		</div>
+		<div class="four columns">
+			<a name="artCableCond"></a>
+			<div class="panel radius">
+				<h5>Conditions of use</h5>
+				<p>fwefwe few fewf ew f kwemlwfklf fwfkjfwfoewjfi xdwidedojewi wdkwodjwdj dwoewdh ddwidowd fwefwe few fewf ew f kwemlwfklf fwfkjfwfoewjfi xdwidedojewi wdkwodjwdj dwoewdh ddwidowd fwefwe few fewf ew f kwemlwfklf fwfkjfwfoewjfi xdwidedojewi wdkwodjwdj dwoewdh ddwidowd</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="cableArtMain" id="cableArtAbout">
+	<div class="row">
+		<div class="four columns">
+			<div id="cableArtSlider">
+			  <img src="images/cableart_01.png" />
+			  <img src="images/cableart_02.png" />
+			  <img src="images/cableart_03.png" />
+			  <img src="images/cableart_04.png" />
+			</div>
+		</div>
+		<div class="four columns">
+			<p>
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. 
+			</p>
+		</div>
+		<div class="four columns">
+			
+		</div>
+
+	</div>
+</section>
+
+<section class="cableArtMain" id="cableArtGallery">
+	<div class="row">
+		<div class="eight columns">
+			<p>
+				<ul class="block-grid three-up mobile-three-up" data-clearing>
+				  <li><a href="uploads/1.jpg"><img data-caption="Maecenas sed diam eget risus varius blandit sit amet non magna." src="uploads/1.jpg"></a></li>
+				  <li><img data-caption="Maecenas sed diam eget risus varius blandit sit amet non magna." src="uploads/2.jpg"></li>
+				  <li><a href="uploads/3.jpg"><img data-caption="Maecenas sed diam eget risus varius blandit sit amet non magna." src="uploads/3.jpg"></a></li>
+				  <li><img data-caption="Maecenas sed diam eget risus varius blandit sit amet non magna." src="uploads/drahthoschi-50stundenarbeit.jpg"></li>
+				  <li><a href="uploads/takupark4.jpg"><img data-caption="Maecenas sed diam eget risus varius blandit sit amet non magna." src="uploads/takupark4.jpg"></a></li>
+				  <li><img data-caption="Maecenas sed diam eget risus varius blandit sit amet non magna." src="uploads/takupark7.jpg"></li>
+				  <li><a href="uploads/1.jpg"><img data-caption="Maecenas sed diam eget risus varius blandit sit amet non magna." src="uploads/1.jpg"></a></li>
+				  <li><img data-caption="Maecenas sed diam eget risus varius blandit sit amet non magna." src="uploads/2.jpg"></li>
+				  <li><a href="uploads/3.jpg"><img data-caption="Maecenas sed diam eget risus varius blandit sit amet non magna." src="uploads/3.jpg"></a></li>
+				  <li><img data-caption="Maecenas sed diam eget risus varius blandit sit amet non magna." src="uploads/drahthoschi-50stundenarbeit.jpg"></li>
+				  <li><a href="uploads/takupark4.jpg"><img data-caption="Maecenas sed diam eget risus varius blandit sit amet non magna." src="uploads/takupark4.jpg"></a></li>
+				  <li><img data-caption="Maecenas sed diam eget risus varius blandit sit amet non magna." src="uploads/takupark7.jpg"></li>
+				</ul>
+			</p>
+		</div>
+		<div class="four columns">
+		</div>
+	</div>
+</section>
+
+
+<footer>
+	<div class="row">
+		<div class="twelve columns">
+			<img src="images/heilandart_logo_small.png" alt="HEILANDART" class="cableArtHeiLogo">
+			<p>cableArt is a project from <a href="http://www.heilandart.de" target="_blank">HEILANDART</a></p>
+		</div>
+	</div>
+</footer>
+
+</div>
+	<!-- Included JS Files (Uncompressed) -->
+	<script src="javascripts/foundation/jquery.js"></script>
+	
+	<script src="javascripts/foundation/jquery.cookie.js"></script>
+	
+	<script src="javascripts/foundation/jquery.event.move.js"></script>
+	
+	<script src="javascripts/foundation/jquery.event.swipe.js"></script>
+	
+	<script src="javascripts/foundation/jquery.foundation.accordion.js"></script>
+	
+	<script src="javascripts/foundation/jquery.foundation.alerts.js"></script>
+	
+	<script src="javascripts/foundation/jquery.foundation.buttons.js"></script>
+	
+	<script src="javascripts/foundation/jquery.foundation.clearing.js"></script>
+	
+	<script src="javascripts/foundation/jquery.foundation.forms.js"></script>
+	
+	<script src="javascripts/foundation/jquery.foundation.joyride.js"></script>
+	
+	<script src="javascripts/foundation/jquery.foundation.magellan.js"></script>
+	
+	<script src="javascripts/foundation/jquery.foundation.mediaQueryToggle.js"></script>
+	
+	<script src="javascripts/foundation/jquery.foundation.navigation.js"></script>
+	
+	<script src="javascripts/foundation/jquery.foundation.orbit.js"></script>
+	
+	<script src="javascripts/foundation/jquery.foundation.reveal.js"></script>
+	
+	<script src="javascripts/foundation/jquery.foundation.tabs.js"></script>
+	
+	<script src="javascripts/foundation/jquery.foundation.tooltips.js"></script>
+	
+	<script src="javascripts/foundation/jquery.foundation.topbar.js"></script>
+	
+	<script src="javascripts/foundation/jquery.placeholder.js"></script>
+	
+
+  	<!-- Application Javascript, safe to override -->
+  	<script src="javascripts/foundation/jquery.fineuploader-3.0.js"></script>
+
+  	<script>
+
+  	function cableArtNavi(url) {
+  		$('section.cableArtMain').hide();
+  		$('nav a').removeClass('active');
+  		var urlGoal = "section#cableArt" + url;
+  		$(urlGoal).show();
+  		$('.nav-bar > li').removeClass('active');
+  		$("#cableArtLink" + url).addClass('active');
+  	}
+
+
+
+  	$(document).ready(function () {
+
+  		cableArtNavi("About");
+  		$("#cableArtSlider").orbit({pauseOnHover: true, bullets: true});
+
+
+		var cableArtConditions = {
+			text: "fwefwe few fewf ew f kwemlwfklf fwfkjfwfoewjfi xdwidedojewi wdkwodjwdj dwoewdh ddwidowd",
+			width: 200
+		};
+		$('.cableArtConditions').attr('title', cableArtConditions.text);
+		$('.cableArtConditions').attr('data-width', cableArtConditions.width);
+
+  		var cableArtUploader = $('#cableArtFileUploader').fineUploader({
+  			request: {
+  				endpoint: 'php/formupload.php'
+  			},
+			text: {
+				uploadButton: 'Click or Drop your file here',
+				dropZone: 'Click or Drop your file here',
+				cancelButton: 'Remove file'
+			},
+
+			template: '<div class="qq-uploader twelve">' +
+			'<div class="qq-upload-drop-area button success">{dragZoneText}</div>' +
+			'<div class="qq-upload-button button">{uploadButtonText}</div>' +
+			'</div>' +
+			'<ul class="qq-upload-list"></ul>',
+			classes: {
+				success: 'alert-box success',
+				fail: 'alert-box alert'
+			},
+			validation: {
+			//	allowedExtensions: ['jpeg','jpg','png'],
+	  			acceptFiles: 'image/*'
+			},
+			showMessage: function(message) {
+				$('#cableArtFileUploader').append('<div class="alert-box alert">' + message + '</div>');
+			},
+  			failedUploadTextDisplay: {
+				mode: 'custom',
+				maxChars: 500,
+				responseProperty: 'error'
+			},
+  			debug: true,
+  			multiple: false,
+  			autoUpload: false
+  		}).on('complete', function(event, id, fileName, responseJSON) {
+				if (responseJSON.success) {
+					var picPath = "uploads/" + fileName;
+					$(this).append('<div class="two cableArtFileUploaderThumb"><img src="' + picPath +'" alt="' + fileName + '"></div>');
+				}
+			}).on('submit', function(event, id, filename) {
+			       	$('#picSubmit').removeClass('has-tip').click(function() {
+						cableArtUploader.fineUploader('uploadStoredFiles');
+					});
+			  });
+
+  	});
+
+  	</script>
+
+  	<script src="javascripts/foundation/app.js"></script>
+
+
+</body>
+</html>

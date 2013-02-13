@@ -1,0 +1,411 @@
+// You custom settings file to override Foundation defaults
+@import "settings";
+
+// Comment out this import if you are customizing you imports below
+@import "foundation";
+
+// ----------------------------------------
+// Import specific parts of Foundation by commenting the import "foundation"
+// and uncommenting what you want below. You must uncomment the following if customizing
+
+// @import "compass/css3";
+// @import "foundation/settings";
+// @import "foundation/functions/all";
+
+// Control which mixins you have access too
+
+// @import "foundation/mixins/clearfix";
+// @import "foundation/mixins/css-triangle";
+// @import "foundation/mixins/font-size";
+
+// Must include next two for semantic grid to work
+
+// @import "foundation/mixins/respond-to";
+// @import "foundation/mixins/semantic-grid";
+
+// @import "modular-scale";
+// @import "foundation/common/globals";
+
+// Must include the grid for any responsiveness
+
+// @import "foundation/components/grid";
+
+// Control which common styles get compiled
+
+// @import "foundation/common/typography";
+// @import "foundation/common/forms";
+
+// Control which components you get if customizing
+
+// @import "foundation/components/modules/buttons";
+// @import "foundation/components/modules/tabs";
+// @import "foundation/components/modules/ui";
+// @import "foundation/components/modules/topbar";
+// @import "foundation/components/modules/navbar";
+// @import "foundation/components/modules/orbit";
+// @import "foundation/components/modules/reveal";
+// @import "foundation/components/modules/offcanvas";
+
+// Media Queries Overrides
+// @import "foundation/components/modules/mqueries";
+
+
+/*
+ * layout
+ */
+
+ html {
+    overflow-y: scroll;
+    @include respondTo(smallScreen) { overflow-y: auto; }
+}
+
+ html,
+ body {
+    height: 100%;
+    line-height: 1;
+ }
+
+ a {
+    cursor: pointer;
+    text-decoration: underline;
+ }
+
+#cableArtWrapper {
+    min-height:100%;
+    position:relative;
+}
+
+.cableArtMain {
+    padding-bottom: $cableArtFooterHeight + 30px;
+}
+
+header {
+    width: 100%;
+    background-color: #e2edcf;
+    height: 110px;  
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: $cableArtFooterHeight;
+    padding-top: 20px;
+    background-color: #e2edcf;
+    border-top: 1px solid $cableArtBorderColor;
+}
+
+header h2 {
+    margin-bottom: 5px;
+    color: $txtColor;
+    font-family: 'PT Sans', sans-serif;
+    font-style: italic;
+}
+
+header p {
+    margin-bottom: 3px; 
+    font-size: ms(3);
+    font-family: 'PT Sans', sans-serif;
+    font-style: italic;
+}
+
+.cableArtHeiLogo {
+    float: left;
+    margin-right: 20px;
+}
+
+footer p {
+    margin-top: 20px;
+    float: left;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.cableArtHint {
+    margin: 25px 0;
+    clear: both;
+}
+
+.button {
+    box-shadow: none;
+}
+
+#cableArtSlider {
+    border: solid 1px $cableArtBorderColor;
+}
+
+.panel {
+    border: 1px solid $cableArtBorderColor;
+}
+
+label {
+    color: $txtColor;
+}
+
+nav {
+    margin-bottom: 40px;
+    border-bottom: 1px solid $cableArtBorderColor;
+    border-top: 1px solid $cableArtBorderColor;
+    @include respondTo(smallScreen) { background-color: transparent; }
+}
+
+
+nav,
+.nav-bar > li {
+    background: #EBEBEB; 
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y1ZjVmNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkZGRkZGQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #f5f5f5 0%, #dddddd 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(100%,#dddddd));
+    background: -webkit-linear-gradient(top,  #f5f5f5 0%,#dddddd 100%);
+    background: -o-linear-gradient(top,  #f5f5f5 0%,#dddddd 100%); 
+    background: -ms-linear-gradient(top,  #f5f5f5 0%,#dddddd 100%); 
+    background: linear-gradient(to bottom,  #f5f5f5 0%,#dddddd 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#dddddd',GradientType=0 ); 
+}
+
+.nav-bar > li:hover,
+.nav-bar > li.active,
+.nav-bar > li.active:hover {
+    background-color: #DFDFDF;
+    background-image: -moz-linear-gradient(center top , #DDDDDD, #E3E3E3);
+    background-repeat: repeat-x;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15) inset;
+/*    z-index: 30;*/
+}
+
+.nav-bar > li {
+    border-left: 0px solid $cableArtBorderColor;
+    border-top: 0px solid $cableArtBorderColor;
+    border-bottom: 0px solid $cableArtBorderColor;
+    border-right: 1px solid $cableArtBorderColor;
+    height: 100%;
+}
+
+.nav-bar > li:first-child {
+    border-left: 0px solid $cableArtBorderColor;
+    border-top: 0px solid $cableArtBorderColor;
+    border-bottom: 0px solid $cableArtBorderColor;
+    border-left: 1px solid $cableArtBorderColor;
+}
+
+.nav-bar > li:last-child {
+    border-left: 0px solid $cableArtBorderColor;
+    border-top: 0px solid $cableArtBorderColor;
+    border-bottom: 0px solid $cableArtBorderColor;
+    border-right: 1px solid $cableArtBorderColor;
+}
+
+.nav-bar > li,
+.nav-bar > li:first-child,
+.nav-bar > li:last-child {
+    @include respondTo(smallScreen) {
+        border-left: 1px solid $cableArtBorderColor;
+        border-width: 0 1px 0 1px;
+    }
+}
+
+.nav-bar > li.active {
+    border-color: $cableArtBorderColor;
+}
+
+.nav-bar > li a,
+.nav-bar > li.active > a {
+    color: #333333;
+    border: none;
+}
+
+ul.nav-bar {
+    margin: 0;
+    padding-top: 0;
+}
+
+ul.nav-bar li {
+    @include respondTo(smallScreen) { text-align: center; }   
+}
+
+nav .columns {
+    padding-top: 0;
+}
+
+/*
+ * fineuploader
+ */
+
+#cableArtFileUploader {
+	margin-bottom: 30px;
+}
+
+.qq-uploader {
+    position: relative;
+    width: 100%;
+}
+.qq-upload-button {
+    width: 100%;
+}
+
+.qq-upload-drop-area, .qq-upload-extra-drop-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.qq-upload-list {
+    margin: 10px 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+.qq-upload-list li {
+    margin: 0;
+    padding: 9px;
+    line-height: 15px;
+    font-size: 16px;
+    background-color: $secondaryColor;
+}
+.qq-upload-list li.success {
+	background-color: $successColor;
+    color: $white;
+}
+
+.qq-upload-list li.alert {
+	background-color: $alertColor;
+    color: $white;
+}
+
+.qq-upload-file, .qq-upload-spinner, .qq-upload-size, .qq-upload-cancel, .qq-upload-retry, .qq-upload-failed-text, .qq-upload-finished {
+    margin-right: 12px;
+}
+.qq-upload-file {
+}
+.qq-upload-spinner {
+    display: inline-block;
+    background: url("loading.gif");
+    width: 15px;
+    height: 15px;
+    vertical-align: text-bottom;
+}
+
+.qq-drop-processing {
+    display: none;
+}
+.qq-upload-finished {
+    display:none;
+    width:15px;
+    height:15px;
+    vertical-align:text-bottom;
+}
+.qq-upload-retry {
+    display: none;
+    color: #000000;
+}
+.qq-upload-cancel {
+	color: #000000;
+}
+.qq-upload-retryable .qq-upload-retry {
+    display: inline;
+}
+.qq-upload-size, .qq-upload-cancel, .qq-upload-retry {
+    font-size: 12px;
+    font-weight: normal;
+}
+.qq-upload-failed-text {
+    display: none;
+    font-style: italic;
+    font-weight: bold;
+}
+.qq-upload-failed-icon {
+    display:none;
+    width:15px;
+    height:15px;
+    vertical-align:text-bottom;
+}
+.qq-upload-fail .qq-upload-failed-text {
+    display: inline;
+}
+.qq-upload-retrying .qq-upload-failed-text {
+    display: inline;
+    color: #D60000;
+}
+.qq-upload-list li.qq-upload-success {
+    background-color: #5DA30C;
+    color: #FFFFFF;
+}
+.qq-upload-list li.qq-upload-fail {
+    background-color: #D60000;
+    color: #FFFFFF;
+}
+.qq-progress-bar {
+    background: -moz-linear-gradient(top,  $progresscolor1 0%, $progresscolor2 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$progresscolor1), color-stop(100%,$progresscolor2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $progresscolor1 0%, $progresscolor2 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $progresscolor1 0%, $progresscolor2 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $progresscolor1 0%, $progresscolor2 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  $progresscolor1 0%, $progresscolor2 100%); /* W3C */
+    width: 0%;
+    height: 15px;
+    border-radius: $buttonRadius;
+    margin-bottom: 10px;
+    border: 1px solid #CCCCCC;
+    padding: 2px;
+    display: none;
+}
+
+.cableArtFileUploaderThumb {
+	margin-top: 20px;
+	margin-right: 20px;
+    float: left;
+}
+
+#cableArtFileUploaderSuccess {
+    margin-top: 30px;
+    float: left;
+}
+
+/* Images Gallery */
+
+.carousel ul img {
+    border: solid 1px $cableArtBorderColor;
+}
+
+
+/*
+ * Upload form
+ */
+
+input:-webkit-input-placeholder,
+textarea:-webkit-input-placeholder {
+	color: $placeholderFontColor;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+	color: $placeholderFontColor;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+	color: $placeholderFontColor;
+} 
+
+#picSubmit {
+    margin-top: 20px;
+}
+
+#callback {
+    display: none;
+}
+
+/* 
+* Gimmicks
+*/ 
+
+.rotate {
+    -webkit-transform: rotate($rotatedeg) translateY(-30px) translateX(15px);
+    -moz-transform: rotate($rotatedeg) translateY(-30px) translateX(15px);
+    -ms-transform: rotate($rotatedeg) translateY(-65px) translateX(15px);
+    -o-transform: rotate($rotatedeg) translateY(-65px) translateX(15px);
+}
+
+.cableArtPic {
+    cursor: pointer;
+}
